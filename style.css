@@ -26,3 +26,220 @@ header h1 { margin: 0; color: #0056b3; }
 .item h3 { margin: 0 0 5px 0; color: #0056b3; }
 .item p { margin: 0 0 10px 0; font-style: italic; color: #555; }
 .item ul { margin-top: 5px; padding-left: 20px; }
+
+/* --- 新增的样式 --- 
+*/
+
+/* "View Plans" 按钮的样式 */
+.button {
+    display: inline-block;
+    background-color: #0056b3; /* 和你标题一样的学术蓝色 */
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #004494; /* 鼠标悬停时颜色变深 */
+}
+
+/* "Back to Home" 链接的样式 */
+.back-link {
+    display: block;
+    margin-bottom: 20px;
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* --- 
+  新增的样式：
+  用于美化我们刚刚添加的“论文标题链接” 
+--- */
+
+.paper-link {
+    color: #0056b3; /* 和你标题一样的学术蓝色 */
+    text-decoration: none; /* 移除默认的下划线 */
+}
+
+.paper-link:hover {
+    text-decoration: underline; /* 鼠标悬停时添加下划线 */
+}
+
+/* --- 
+  新增的样式：
+  用于创建顶部的“横排导航栏”
+--- */
+
+/* 导航栏容器 */
+nav.navbar {
+    background-color: #ffffff; /* 白色背景 */
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+/* 导航栏内部的容器 (限制宽度并居中) */
+.nav-container {
+    display: flex; /* 使用 Flexbox 布局 (这是实现“横排”的关键) */
+    justify-content: space-between; /* 两端对齐：Logo在左，链接在右 */
+    align-items: center; /* 垂直居中 */
+
+    max-width: 800px; /* 限制内容宽度，和你的 .container 一样 */
+    margin: 0 auto; /* 页面居中 */
+    padding: 0 20px; /* 左右留白 */
+}
+
+/* 导航栏左侧的“Logo” (你的名字) */
+.navbar .logo {
+    font-size: 1.5em; /* 字体稍大 */
+    font-weight: bold;
+    color: #0056b3; /* 学术蓝色 */
+    text-decoration: none; /* 移除下划线 */
+}
+
+/* 导航栏右侧的“链接列表” */
+.navbar ul {
+    list-style: none; /* 移除 <li> 的默认圆点 */
+    margin: 0;
+    padding: 0;
+    display: flex; /* 让链接也横排 */
+}
+
+.navbar ul li {
+    margin-left: 20px; /* 链接之间的间距 */
+}
+
+.navbar ul li a {
+    text-decoration: none; /* 移除下划线 */
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #0056b3; /* 鼠标悬停时变蓝 */
+}
+
+
+
+/* --- 
+  新增的样式：
+  用于创建顶部的“横排导航栏”
+--- */
+
+/* 导航栏容器 */
+nav.navbar {
+    background-color: #ffffff; /* 白色背景 */
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+
+    /* 关键：让导航栏“粘”在页面顶部 */
+    position: sticky;
+    top: 0;
+    z-index: 100; /* 确保它在最上层 */
+}
+
+/* 导航栏内部的容器 (限制宽度并居中) */
+.nav-container {
+    display: flex; /* 使用 Flexbox 布局 (这是实现“横排”的关键) */
+    justify-content: space-between; /* 两端对齐：Logo在左，链接在右 */
+    align-items: center; /* 垂直居中 */
+
+    max-width: 800px; /* 限制内容宽度，和你的 .container 一样 */
+    margin: 0 auto; /* 页面居中 */
+    padding: 0 20px; /* 左右留白 */
+}
+
+/* 导航栏左侧的“Logo” (你的名字) */
+.navbar .logo {
+    font-size: 1.5em; /* 字体稍大 */
+    font-weight: bold;
+    color: #0056b3; /* 学术蓝色 */
+    text-decoration: none; /* 移除下划线 */
+}
+
+/* 导航栏右侧的“链接列表” */
+.navbar ul {
+    list-style: none; /* 移除 <li> 的默认圆点 */
+    margin: 0;
+    padding: 0;
+    display: flex; /* 让链接也横排 */
+}
+
+.navbar ul li {
+    margin-left: 20px; /* 链接之间的间距 */
+}
+
+.navbar ul li a {
+    text-decoration: none; /* 移除下划线 */
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #0056b3; /* 鼠标悬停时变蓝 */
+}
+
+/* (这是一个小修复，防止页面跳转时，标题被导航栏挡住) */
+section[id] {
+    scroll-margin-top: 80px; 
+}
+
+
+/* --- 
+  新增的样式：
+  用于 "Games" 和 "Writing" 页面的作品集卡片
+--- */
+
+/* 卡片容器 (使用 Flexbox) */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* 允许卡片换行 */
+    margin: 0 -10px; /* 抵消卡片的 padding */
+}
+
+/* 单个卡片 */
+.card {
+    flex-basis: 300px; /* 卡片的基础宽度 */
+    flex-grow: 1;
+    margin: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 20px;
+    background: #fff;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* 鼠标悬停时轻微上浮 */
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+    color: #0056b3;
+}
+
+.card p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card-link {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+.card-link:hover {
+    text-decoration: underline;
+}
